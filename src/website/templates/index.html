@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Faucet</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <h1 style="text-align: center;">Nova Faucet</h1>
+    <br>
+    <div style="text-align: center;">
+        Welcome to the Nova Faucet. You can claim for free and without having to wait
+        <br>
+        trx for unlimited times!
+    </div>
+    <br>
+    <br>
+    <br>
+    <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h4>Input here your faucetpay.io trx wallet!</h4>
+        <br>
+        <form action="/get">
+            <input type="text" name="recipient" id="recipient" placeholder="Your Wallet" autocomplete="on" required>
+            <br>
+            <input type="submit" value="Get Faucet!">
+        </form>
+    </div>
+</body>
+</html>
