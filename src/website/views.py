@@ -12,7 +12,7 @@ rand_codes = {}
 faucet_api_key = os.getenv("FAUCET_API_KEY")
 short_api_key = os.getenv("SHORT_API_KEY")
 base_url = "https://faucetpay.io/api/v1"
-base_long_url = "http://192.168.1.138:5000"
+base_long_url = "https://faucet.novaservices.tk"
 
 @views.route("/")
 def root():
